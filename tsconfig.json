@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2019",
+        "resolveJsonModule": true,
+        "types": ["node"],
+        "esModuleInterop": true
+    },
+    "files": ["lastfm.ts", "fantano.ts"],
+    "include": ["./lastfm-commands", "./lastfm-utils", "./lastfm-models"]
+}

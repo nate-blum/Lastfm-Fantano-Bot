@@ -1,0 +1,448 @@
+[
+    {
+        "name": "rank",
+        "description": "The item at a specific rank for a given time period for you or your mention.",
+        "options": [
+            {
+                "type": 3,
+                "name": "item-type",
+                "description": "Which type of item to be found.",
+                "required": true,
+                "choices": [
+                    {
+                        "name": "artist",
+                        "value": "artist"
+                    },
+                    {
+                        "name": "track",
+                        "value": "track"
+                    },
+                    {
+                        "name": "album",
+                        "value": "album"
+                    }
+                ]
+            },
+            {
+                "type": 3,
+                "name": "time",
+                "description": "The time period for the rank. Defaults to overall.",
+                "choices": [
+                    {
+                        "name": "week",
+                        "value": "week"
+                    },
+                    {
+                        "name": "overall",
+                        "value": "overall"
+                    },
+                    {
+                        "name": "month",
+                        "value": "month"
+                    },
+                    {
+                        "name": "year",
+                        "value": "year"
+                    },
+                    {
+                        "name": "3 months",
+                        "value": "3month"
+                    },
+                    {
+                        "name": "6 months",
+                        "value": "6month"
+                    }
+                ]
+            },
+            {
+                "type": 6,
+                "name": "mention",
+                "description": "The user for finding the rank. Defaults to the author."
+            },
+            {
+                "type": 4,
+                "name": "rank",
+                "description": "The rank to be found. Defaults to 1."
+            }
+        ]
+    },
+    {
+        "name": "wk",
+        "description": "Ranking server listens to a specific item.",
+        "options": [
+            {
+                "type": 3,
+                "name": "item-type",
+                "description": "Which type of item to be found.",
+                "choices": [
+                    {
+                        "name": "artist",
+                        "value": "artist"
+                    },
+                    {
+                        "name": "track",
+                        "value": "track"
+                    },
+                    {
+                        "name": "album",
+                        "value": "album"
+                    }
+                ]
+            },
+            {
+                "type": 6,
+                "name": "mention",
+                "description": "Data will be found for your mention. Defaults to you."
+            },
+            {
+                "type": 3,
+                "name": "item-name",
+                "description": "The name of the item to find. Defaults to what you are currently listening to."
+            }
+        ]
+    },
+    {
+        "name": "top",
+        "description": "A list of your top tracks or albums per artist.",
+        "default_permission": true,
+        "options": [
+            {
+                "type": 3,
+                "name": "item-type",
+                "description": "Which type of item to be found.",
+                "required": true,
+                "choices": [
+                    {
+                        "name": "track",
+                        "value": "track"
+                    },
+                    {
+                        "name": "album",
+                        "value": "album"
+                    }
+                ]
+            },
+            {
+                "type": 3,
+                "name": "artist-name",
+                "description": "The name of the artist. Defaults to what you are currently listening to."
+            },
+            {
+                "type": 4,
+                "name": "length",
+                "description": "The length of the list. Defaults to 10."
+            },
+            {
+                "type": 6,
+                "name": "mention",
+                "description": "Data will be found for your mention. Defaults to you."
+            },
+            {
+                "type": 3,
+                "name": "time",
+                "description": "The time period. Defaults to overall.",
+                "choices": [
+                    {
+                        "name": "week",
+                        "value": "week"
+                    },
+                    {
+                        "name": "overall",
+                        "value": "overall"
+                    },
+                    {
+                        "name": "month",
+                        "value": "month"
+                    },
+                    {
+                        "name": "year",
+                        "value": "year"
+                    },
+                    {
+                        "name": "3 months",
+                        "value": "3month"
+                    },
+                    {
+                        "name": "6 months",
+                        "value": "6month"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "tta",
+        "description": "Top tracks per album.",
+        "options": [
+            {
+                "type": 3,
+                "name": "album-name",
+                "description": "The name of the album. Defaults to what you are currently listening to."
+            },
+            {
+                "type": 4,
+                "name": "length",
+                "description": "The length of the list. Defaults to 10."
+            },
+            {
+                "type": 6,
+                "name": "mention",
+                "description": "Data will be found for your mention. Defaults to you."
+            }
+        ]
+    },
+    {
+        "name": "scrobbles",
+        "description": "A scrobble leaderboard or your own personal scrobbles.",
+        "options": [
+            {
+                "type": 3,
+                "name": "time",
+                "description": "The time period. Defaults to overall.",
+                "choices": [
+                    {
+                        "name": "day",
+                        "value": "day"
+                    },
+                    {
+                        "name": "week",
+                        "value": "week"
+                    },
+                    {
+                        "name": "overall",
+                        "value": "overall"
+                    },
+                    {
+                        "name": "month",
+                        "value": "month"
+                    },
+                    {
+                        "name": "year",
+                        "value": "year"
+                    }
+                ]
+            },
+            {
+                "type": 5,
+                "name": "leaderboard",
+                "description": "Whether to show a leaderboard. Defaults to false."
+            },
+            {
+                "type": 6,
+                "name": "mention",
+                "description": "Data will be found for your mention. Defaults to you."
+            }
+        ]
+    },
+    {
+        "name": "plays",
+        "description": "You or your mention's plays for a specific item.",
+        "options": [
+            {
+                "type": 3,
+                "name": "item-type",
+                "required": true,
+                "description": "The item type.",
+                "choices": [
+                    {
+                        "name": "artist",
+                        "value": "artist"
+                    },
+                    {
+                        "name": "track",
+                        "value": "track"
+                    },
+                    {
+                        "name": "album",
+                        "value": "album"
+                    }
+                ]
+            },
+            {
+                "type": 6,
+                "name": "mention",
+                "description": "Data will be found for your mention. Defaults to you."
+            },
+            {
+                "type": 3,
+                "name": "item-name",
+                "description": "The name of the item. Defaults to what you are currently listening to."
+            }
+        ]
+    },
+    {
+        "name": "recs",
+        "description": "10 random artist recommendations.",
+        "options": [
+            {
+                "type": 3,
+                "name": "artist-name",
+                "description": "An artist to base the recommendations off of. Otherwise it will be your top 10 artists."
+            }
+        ]
+    },
+    {
+        "name": "compare",
+        "description": "Comparison of shared artists between you and your mention.",
+        "options": [
+            {
+                "type": 6,
+                "name": "mention",
+                "required": true,
+                "description": "The person you wish to compare your scrobbles to."
+            }
+        ]
+    },
+    {
+        "name": "list",
+        "description": "A list of you or your mention's top artists, tracks, or albums.",
+        "options": [
+            {
+                "type": 3,
+                "name": "item-type",
+                "description": "Which type of item to be found.",
+                "required": true,
+                "choices": [
+                    {
+                        "name": "track",
+                        "value": "tracks"
+                    },
+                    {
+                        "name": "album",
+                        "value": "albums"
+                    },
+                    {
+                        "name": "artist",
+                        "value": "artists"
+                    }
+                ]
+            },
+            {
+                "type": 4,
+                "name": "length",
+                "description": "The length of the list. Defaults to 10."
+            },
+            {
+                "type": 6,
+                "name": "mention",
+                "description": "Data will be found for your mention. Defaults to you."
+            },
+            {
+                "type": 3,
+                "name": "time",
+                "description": "The time period. Defaults to week.",
+                "choices": [
+                    {
+                        "name": "week",
+                        "value": "week"
+                    },
+                    {
+                        "name": "overall",
+                        "value": "overall"
+                    },
+                    {
+                        "name": "month",
+                        "value": "month"
+                    },
+                    {
+                        "name": "year",
+                        "value": "year"
+                    },
+                    {
+                        "name": "3 months",
+                        "value": "3month"
+                    },
+                    {
+                        "name": "6 months",
+                        "value": "6month"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "chart",
+        "description": "A list of you or your mention's top artists, tracks, or albums.",
+        "options": [
+            {
+                "type": 3,
+                "name": "size",
+                "description": "The size of the chart. Defaults to 3x3.",
+                "choices": [
+                    {
+                        "name": "3x3",
+                        "value": "3"
+                    },
+                    {
+                        "name": "4x4",
+                        "value": "4"
+                    },
+                    {
+                        "name": "5x5",
+                        "value": "5"
+                    },
+                    {
+                        "name": "6x6",
+                        "value": "6"
+                    },
+                    {
+                        "name": "7x7",
+                        "value": "7"
+                    }
+                ]
+            },
+            {
+                "type": 6,
+                "name": "mention",
+                "description": "Data will be found for your mention. Defaults to you."
+            },
+            {
+                "type": 3,
+                "name": "time",
+                "description": "The time period. Defaults to overall.",
+                "choices": [
+                    {
+                        "name": "week",
+                        "value": "week"
+                    },
+                    {
+                        "name": "overall",
+                        "value": "overall"
+                    },
+                    {
+                        "name": "month",
+                        "value": "month"
+                    },
+                    {
+                        "name": "year",
+                        "value": "year"
+                    },
+                    {
+                        "name": "3 months",
+                        "value": "3month"
+                    },
+                    {
+                        "name": "6 months",
+                        "value": "6month"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "scores",
+        "description": "A list of you or your mention's top artists, tracks, or albums.",
+        "options": [
+            {
+                "type": 3,
+                "name": "artist-name",
+                "description": "Artist to find scores for. Defaults to the one you are currently listening to."
+            },
+            {
+                "type": 6,
+                "name": "mention",
+                "description": "Add a mention to use the artist they are currently listening to."
+            }
+        ]
+    }
+]
